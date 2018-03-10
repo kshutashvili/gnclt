@@ -1,0 +1,1004 @@
+@charset "UTF-8";
+/*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+@font-face {
+  font-family: "social";
+  src: url("../fonts/myicons.eot");
+  src: url("../fonts/myicons.?#iefix") format("embedded-opentype"), url("../fonts/myicons.woff") format("woff"), url("../fonts/myicons.ttf") format("truetype"), url("../fonts/myicons.#myicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon {
+  font-family: "social"; }
+  .icon:before {
+    /* Some common icon stuff */ }
+  .icon.icon--search:before {
+    content: ""; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans/OpenSans.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/Futura/FuturaBT-Medium.woff2") format("woff2"), url("../fonts/Futura/FuturaBT-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway/Raleway-Italic.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/Futura/FuturaBT-Bold.woff2") format("woff2"), url("../fonts/Futura/FuturaBT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html, body {
+  font-family: 'Roboto', sans-serif; }
+
+html {
+  font-size: 10px;
+  color: #6b6b6b; }
+
+body {
+  font-size: 16px; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; }
+
+fieldset {
+  border: none; }
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none; }
+
+.b-checkbox input {
+  display: none; }
+  .b-checkbox input:checked + label:before {
+    content: "\2713";
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    line-height: 13px;
+    border-color: red; }
+  .b-checkbox input:checked + label {
+    color: red; }
+
+.b-checkbox label {
+  display: inline-block;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer; }
+  .b-checkbox label:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border: 1px solid #ccc; }
+
+.b-checkbox__link {
+  font-weight: 500;
+  color: red;
+  text-decoration: underline; }
+  .b-checkbox__link:hover {
+    opacity: .7; }
+
+.b-spoiler {
+  overflow: hidden; }
+  .b-spoiler h3 {
+    cursor: pointer; }
+    .b-spoiler h3.is-active + p {
+      max-height: 10rem;
+      margin: 2.5rem 0 0 0; }
+  .b-spoiler p {
+    margin: 0;
+    max-height: 0;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; }
+
+.b-tooltip {
+  position: absolute;
+  display: none;
+  left: -7.5rem;
+  bottom: 0;
+  -webkit-transform: translate(0, 130%);
+      -ms-transform: translate(0, 130%);
+          transform: translate(0, 130%);
+  padding: .7rem 2rem;
+  background-color: #D6E3F1;
+  color: red;
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+  opacity: 0; }
+  .b-tooltip:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #D6E3F1; }
+
+.b-switcher {
+  position: relative;
+  display: inline-block;
+  margin-top: .2rem;
+  font-size: 14px;
+  color: red; }
+  .b-switcher__heart {
+    position: relative;
+    display: inline-block;
+    background-color: red;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 9000rem;
+    cursor: pointer; }
+    .b-switcher__heart:before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      left: 2px;
+      background-color: #fff;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      -webkit-transition: -webkit-transform .4s;
+      transition: -webkit-transform .4s;
+      -o-transition: transform .4s;
+      transition: transform .4s;
+      transition: transform .4s, -webkit-transform .4s; }
+  .b-switcher__value {
+    position: absolute;
+    width: 3rem;
+    top: 50%;
+    right: -0.5rem;
+    -webkit-transform: translate(100%, -65%);
+        -ms-transform: translate(100%, -65%);
+            transform: translate(100%, -65%);
+    opacity: 0;
+    cursor: pointer; }
+    .b-switcher__value--off {
+      opacity: 1; }
+  .b-switcher input {
+    display: none; }
+    .b-switcher input:checked + .switcher__heart:before {
+      -webkit-transform: translate(1.4rem, -50%);
+          -ms-transform: translate(1.4rem, -50%);
+              transform: translate(1.4rem, -50%); }
+    .b-switcher input:checked ~ .switcher__value--on {
+      opacity: 1; }
+    .b-switcher input:checked ~ .switcher__value--off {
+      opacity: 0; }
+
+.logo {
+  max-width: 11rem; }
+
+.btn {
+  padding: .5rem 2rem;
+  border: none;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 1111rem;
+  font-size: 14px;
+  color: #fff; }
+  .btn-box button:not(:last-child) {
+    margin-right: 1rem; }
+  .btn--primary {
+    color: #22A1FF;
+    padding: 1rem 6rem;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .btn--primary:hover {
+      border-color: #22A1FF;
+      background-color: #22A1FF;
+      color: #fff; }
+  .btn-mouse {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    bottom: 0;
+    right: 0; }
+
+.container {
+  max-width: 115rem;
+  margin: 0 auto; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem 0; }
+  .header__nav {
+    margin: 0 auto 0 2rem;
+    font-family: 'Futura';
+    color: #22A1FF;
+    font-size: 14px; }
+    .header__nav-link {
+      -webkit-transition: color .2s;
+      -o-transition: color .2s;
+      transition: color .2s; }
+      .header__nav-link:not(:last-child) {
+        margin-right: 1rem; }
+      .header__nav-link:hover {
+        color: #fff; }
+  .header__btn {
+    color: #fff;
+    -webkit-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s; }
+    .header__btn:hover {
+      color: #22A1FF; }
+
+.main {
+  font-size: 14px;
+  padding: 3.5rem 0 0 0; }
+  .main-section {
+    background: url("../img/background.png") no-repeat;
+    background-size: cover; }
+  .main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .main-special {
+    padding: 0 .5rem;
+    color: #22A1FF; }
+  .main__content {
+    width: 50%;
+    position: relative; }
+    .main__content-title {
+      font-family: "Futura";
+      margin: 4.5rem 0 3.5rem 0;
+      font-size: 36px;
+      font-weight: normal;
+      color: #fff; }
+    .main__content--left {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      max-width: 59rem;
+      padding-bottom: 4rem; }
+    .main__content--right {
+      padding-left: 4rem; }
+  .main-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    padding-left: 10%;
+    color: #fff; }
+    .main-price__content {
+      width: 100%; }
+    .main-price__title {
+      margin: 0 0 1.3rem 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase; }
+    .main-price p {
+      margin: 0 0 1rem 0;
+      font-family: "Raleway"; }
+    .main-price__link {
+      margin: 0 0 1rem 0; }
+    .main-price__percent {
+      margin-left: 1.8rem;
+      font-size: 18px; }
+    .main-price__time {
+      padding: 0; }
+  .main-progress {
+    position: relative;
+    width: 120px;
+    height: 80px; }
+    .main-progress__container {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      clip: rect(0px, 100px, 100px, 50px); }
+    .main-progress__circle {
+      width: 80px;
+      height: 80px;
+      border: 15px solid #22A1FF;
+      border-radius: 50px;
+      position: absolute;
+      clip: rect(0px, 50px, 100px, 0px); }
+      .main-progress__circle--right {
+        -webkit-transform: rotate(120deg);
+            -ms-transform: rotate(120deg);
+                transform: rotate(120deg); }
+  .main__info {
+    color: #fff; }
+    .main__info-title {
+      margin: 4.5rem 0 3.5rem 0;
+      font-size: 36px;
+      font-family: "Futura";
+      font-weight: normal; }
+    .main__info-text {
+      margin: 0 0 3rem 0;
+      line-height: 1.438; }
+  .main__assets {
+    margin-top: 7rem;
+    color: #fff; }
+    .main__assets-item svg {
+      margin-right: 1rem; }
+    .main__assets-item:not(:last-child) {
+      margin-right: 2.4rem; }
+    .main__assets-item:hover {
+      color: #22A1FF; }
+  .main__player {
+    display: inline-block;
+    position: relative;
+    font-family: "Futura";
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4rem;
+    background: url("../img/elipses.png") no-repeat;
+    background-size: contain; }
+    .main__player-link {
+      text-decoration: underline; }
+      .main__player-link:hover {
+        color: #22A1FF; }
+    .main__player-img {
+      position: relative;
+      max-width: 50rem; }
+      .main__player-img img {
+        display: block;
+        width: 100%; }
+    .main__player .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 8.5rem;
+      height: 8.5rem;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #22A1FF;
+      font-size: 2rem;
+      border: 20px solid #22A1FF;
+      -webkit-box-shadow: 0 0 0 20px rgba(34, 161, 255, 0.6), 0 0 0 40px rgba(34, 161, 255, 0.4);
+              box-shadow: 0 0 0 20px rgba(34, 161, 255, 0.6), 0 0 0 40px rgba(34, 161, 255, 0.4); }
+      .main__player .btn-play svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-40%, -50%);
+            -ms-transform: translate(-40%, -50%);
+                transform: translate(-40%, -50%); }
+  .main-subscribe__label {
+    display: block;
+    padding-left: 2.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    color: #8f8f8f; }
+  .main-subscribe__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 15px; }
+  .main-subscribe__input {
+    width: 100%;
+    max-width: 32rem;
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: rgba(34, 161, 255, 0.1);
+    border: 0; }
+    .main-subscribe__input::-webkit-input-placeholder {
+      color: #fff;
+      -webkit-transition: color .3s;
+      -o-transition: color .3s;
+      transition: color .3s; }
+    .main-subscribe__input:-ms-input-placeholder {
+      color: #fff;
+      -webkit-transition: color .3s;
+      -o-transition: color .3s;
+      transition: color .3s; }
+    .main-subscribe__input::-ms-input-placeholder {
+      color: #fff;
+      -webkit-transition: color .3s;
+      -o-transition: color .3s;
+      transition: color .3s; }
+    .main-subscribe__input::placeholder {
+      color: #fff;
+      -webkit-transition: color .3s;
+      -o-transition: color .3s;
+      transition: color .3s; }
+    .main-subscribe__input:focus::-webkit-input-placeholder {
+      color: #22A1FF; }
+    .main-subscribe__input:focus:-ms-input-placeholder {
+      color: #22A1FF; }
+    .main-subscribe__input:focus::-ms-input-placeholder {
+      color: #22A1FF; }
+    .main-subscribe__input:focus::placeholder {
+      color: #22A1FF; }
+  .main-subscribe__btn {
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #22A1FF;
+    border: none; }
+    .main-subscribe__btn:hover {
+      -webkit-box-shadow: 0 0 20px 2px #22A1FF;
+              box-shadow: 0 0 20px 2px #22A1FF; }
+  .main__exchange {
+    display: inline-block;
+    padding: 0 1rem;
+    text-align: center; }
+    .main__exchange:not(:last-child) {
+      margin-right: 2rem; }
+    .main__exchange-wrap {
+      position: relative;
+      margin-top: 5.5rem;
+      padding: 3rem 0;
+      background-color: #22A1FF; }
+    .main__exchange-btn {
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      font-size: 2.5rem;
+      border: none;
+      color: #fff;
+      background-color: #22A1FF;
+      right: 0;
+      top: 0;
+      -webkit-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+              transform: translateY(-100%); }
+    .main__exchange-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .main__exchange-title {
+      margin: 0 0 1rem 0;
+      color: #fff; }
+    .main__exchange-rate {
+      font-family: "OpenSans";
+      font-size: 16px;
+      color: #000;
+      font-weight: bold; }
+  .main-link {
+    display: inline-block;
+    color: #22A1FF;
+    text-decoration: underline; }
+    .main-link:hover {
+      color: #fff; }
+
+.timer {
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .timer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 28.4rem; }
+    .timer-container .main-link {
+      margin-left: auto; }
+  .timer-title {
+    margin: 0 0 1.5rem 0;
+    font-family: "Futura";
+    font-weight: normal;
+    font-size: 18px;
+    color: white; }
+  .timer__item {
+    display: inline-block;
+    text-align: center; }
+    .timer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+    .timer__item-number {
+      display: inline-block;
+      min-width: 6rem;
+      min-height: 6rem;
+      color: #22A1FF;
+      border: 1px solid rgba(34, 161, 255, 0.4);
+      font-size: 4.5rem;
+      font-weight: bold;
+      line-height: 6rem; }
+    .timer__item-caption {
+      color: #9c9c9c; }
+  .timer-total {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-weight: 500;
+    color: #474849;
+    font-family: "Futura"; }
+
+.popup {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); }
+  .popup-content {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .popup-content iframe {
+      width: 560px;
+      height: 315px; }
+  .popup__close {
+    position: absolute;
+    top: -1rem;
+    right: -5rem;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background-color: transparent;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer; }
+    .popup__close:hover {
+      -webkit-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+              transform: scale(1.3); }
+    .popup__close:after, .popup__close:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 50%;
+      width: 5px;
+      background-color: #22A1FF; }
+    .popup__close:after {
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          -ms-transform: translate(-50%, -50%) rotate(45deg);
+              transform: translate(-50%, -50%) rotate(45deg); }
+    .popup__close:before {
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          -ms-transform: translate(-50%, -50%) rotate(-45deg);
+              transform: translate(-50%, -50%) rotate(-45deg); }
+
+/*# sourceMappingURL=styles.css.map */

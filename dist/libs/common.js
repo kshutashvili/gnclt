@@ -5,8 +5,13 @@ window.onload = function() {
 
 	function onYouTubePlayerAPIReady() {
 		play = new YT.Player('GNCvideo', {videoId: 'tD_mGEcAi9Q', autoplay: 0});
-		document.querySelector('#site-video .popup__close').onclick = function() {
-			play.pauseVideo();};
+		$('#videoClose').on('click', function(e) {
+			play.pauseVideo();
+		});
+
+		$('.popup').on('click', function(e) {
+			play.pauseVideo();
+		});
 	}
 
 	onYouTubePlayerAPIReady();
@@ -15,43 +20,9 @@ window.onload = function() {
 		popup.open($('.popup #site-video'));
 	});
 
-	/*$('#site-video .popup__close').on('click', function(e) {
-		console.log(1)
-		$('#site-video iframe')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-	});*/
-	var countDownDate = new Date("Mar 13, 2018 0:00:00").getTime();
+	var timer = new Timer("Mar 13, 2018 0:00:00");
 
-	// Update the count down every 1 second
-	var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-
-    // Output the result in an element with id="demo"
-    function pretty_time_string(num) {
-    	return ( num < 10 ? "0" : "" ) + num;
-    }
-    
-    $('#days').text(pretty_time_string(days));
-    $('#hours').text(pretty_time_string(hours));
-    $('#minutes').text(pretty_time_string(minutes));
-    $('#seconds').text(pretty_time_string(seconds));
-
-    // If the count down is over, write some text 
-    if (distance < 0) {
-    	clearInterval(x);
-    }
-  }, 1000);
+	timer.setDate($('#days'), $('#hours'), $('#minutes'), $('#seconds'));
 };
 
 function Popup() {
@@ -82,4 +53,37 @@ function Popup() {
 	}
 
 	popup.on('click', self.close);
+}
+
+function Timer(date) {
+	var self = this;
+
+	self.countDownDate = new Date(date).getTime();
+
+	self.setDate = function(days, hours, minutes, seconds) {
+		var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    
+    var distance = self.countDownDate - now;
+    
+    var d = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var s = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    function pretty_time_string(num) {
+    	return ( num < 10 ? "0" : "" ) + num;
+    }
+    
+    days.text(pretty_time_string(d));
+    hours.text(pretty_time_string(h));
+    minutes.text(pretty_time_string(m));
+    seconds.text(pretty_time_string(s));
+
+    if (distance < 0) {
+    	clearInterval(x);
+    }
+  }, 1000);
+	}
 }

@@ -608,11 +608,13 @@ ul {
       color: #fff; }
   .btn-mouse {
     position: absolute;
+    left: 50%;
+    top: -1rem;
+    -webkit-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
     background-color: transparent;
-    border: none;
-    padding: 0;
-    bottom: 0;
-    right: 0; }
+    border: none; }
 
 .container {
   max-width: 115rem;
@@ -672,7 +674,8 @@ ul {
     color: #22A1FF; }
   .main__content {
     width: 50%;
-    position: relative; }
+    position: relative;
+    padding-bottom: 7.5rem; }
     .main__content-title {
       font-family: "Futura";
       margin: 4.5rem 0 3.5rem 0;
@@ -688,10 +691,9 @@ ul {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      max-width: 59rem;
-      padding-bottom: 4rem; }
+      max-width: 59rem; }
     .main__content--right {
-      padding-left: 4rem; }
+      padding-left: 4%; }
   .main-price {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -861,7 +863,6 @@ ul {
       margin-right: 2rem; }
     .main__exchange-wrap {
       position: relative;
-      margin-top: 5.5rem;
       padding: 3rem 0;
       background-color: #22A1FF; }
     .main__exchange-btn {
@@ -882,9 +883,10 @@ ul {
       display: -ms-flexbox;
       display: flex; }
     .main__exchange-title {
-      margin: 0 0 1rem 0;
+      margin: 0;
       color: #fff; }
     .main__exchange-rate {
+      margin-top: 1rem;
       font-family: "OpenSans";
       font-size: 16px;
       color: #000;

@@ -73,13 +73,9 @@
 						<a href="http://www.lugebi.com/index_files/GNC-white-paper-en.pdf" class="main__assets-item" target="_blank"><i class="far fa-copy"></i>White Paper</a>
 						<a href="#" class="main__assets-item"><i class="far fa-file"></i>One Pager</a>
 					</div>
-
-					<button class="btn-mouse">
-						<img src="dist/img/icons/mouse.png" alt="mouse">
-					</button>
 				</div>
 
-				<div class="main__content--right">
+				<div class="main__content main__content--right">
 					<div class="main__player">
 						<div class="main__player-img">
 							<img src="dist/img/monitor.png" alt="display" class="main__player-img">
@@ -99,6 +95,9 @@
 			</div>
 			
 			<div class="main__exchange-wrap">
+				<button class="btn-mouse">
+						<img src="dist/img/icons/mouse.png" alt="mouse">
+					</button>
 				<button class="main__exchange-btn">
 					<i class="fas fa-share-alt"></i>
 				</button>
@@ -155,11 +154,13 @@
 
 	<div class="popup">
 		<div id="site-video" class="popup-content">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/tD_mGEcAi9Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+			<div data-id="tD_mGEcAi9Q" id="GNCvideo"></div>
 
 			<span class="popup__close"></span>
 		</div>
 	</div>
+	<script src="https://www.youtube.com/iframe_api"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

@@ -2,16 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Galaxy Network Inc</title>
 	<link rel="stylesheet" href="dist/css/styles.css">
+
 </head>
 <body>
-	
+	<menu class="mobile-menu">
+		<a href="#" class="mobile-menu__link">Project</a>
+		<a href="#" class="mobile-menu__link">Payments</a>
+		<a href="#" class="mobile-menu__link">Team</a>
+		<a href="#" class="mobile-menu__link">Contact</a>
+	</menu>
 	<section class="main-section">
 		<header class="header">
 			<a href="#" class="logo">
 				<img src="dist/img/logo.png" alt="logo">
 			</a>
+			
 			<nav class="header__nav">
 				<a href="#" class="header__nav-link">Project</a>
 				<a href="#" class="header__nav-link">Payments</a>
@@ -22,6 +30,14 @@
 				<button class="btn header__btn">Log in</button>
 				<button class="btn header__btn">Registration</button>
 			</div>
+			<button class="mobile-btn">
+				<div class="mobile-btn__sandwich">
+					<span class="mobile-btn__topper"></span>
+					<span class="mobile-btn__middle"></span>
+					<span class="mobile-btn__footer"></span>
+				</div>
+				<span>Menu</span>
+			</button>
 		</header>
 		<section class="main">
 			<div class="container">
@@ -80,6 +96,7 @@
 						<div class="main__player-img">
 							<img src="dist/img/monitor.png" alt="display" class="main__player-img">
 							<button class="btn-play"><i class="fas fa-play"></i></button>
+							<a href="https://www.youtube.com/watch?v=tD_mGEcAi9Q" class="link-play"><i class="fas fa-play"></i></a>
 						</div>
 						<a href="https://www.youtube.com/watch?v=tD_mGEcAi9Q" class="main__player-link" target="_blank">Whatch the video</a>
 					</div>
@@ -96,8 +113,8 @@
 			
 			<div class="main__exchange-wrap">
 				<button class="btn-mouse">
-						<img src="dist/img/icons/mouse.png" alt="mouse">
-					</button>
+					<img src="dist/img/icons/mouse.png" alt="mouse">
+				</button>
 				<button class="main__exchange-btn">
 					<i class="fas fa-share-alt"></i>
 				</button>

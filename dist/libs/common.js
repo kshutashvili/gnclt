@@ -22,7 +22,29 @@ window.onload = function() {
 
 	var timer = new Timer("Mar 13, 2018 0:00:00");
 
-	timer.setDate($('#days'), $('#hours'), $('#minutes'), $('#seconds'));
+	timer.setDate($('#days'), $('#hours'), $('#minutes'),
+	 $('#seconds'));
+
+	$('.mobile-btn').on('click', function(e) {
+		$(this).toggleClass('active');
+
+		if ($(this).hasClass('active')) {
+			$('.mobile-menu').stop(true, true).css({
+				display: "flex",
+				opacity: 0
+			}).animate({
+				opacity: 1
+			})
+		}else {
+			$('.mobile-menu').stop(true, true).fadeOut();
+		}
+		$('.mobile-menu').toggleClass('active');
+	});
+
+	$('.mobile-menu__link').on('click', function(e) {
+		$('.mobile-btn').removeClass('active');
+		$('.mobile-menu').stop(true, true).fadeOut();
+	});
 };
 
 function Popup() {

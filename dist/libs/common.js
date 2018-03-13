@@ -20,10 +20,11 @@ window.onload = function() {
 		popup.open($('.popup #site-video'));
 	});
 
-	var timer = new Timer("Mar 13, 2018 0:00:00");
+	var time = $('.timer').data('time')
+	var timer = new Timer(time);
 
 	timer.setDate($('#days'), $('#hours'), $('#minutes'),
-	 $('#seconds'));
+		$('#seconds'));
 
 	$('.mobile-btn').on('click', function(e) {
 		$(this).toggleClass('active');
@@ -85,27 +86,31 @@ function Timer(date) {
 	self.setDate = function(days, hours, minutes, seconds) {
 		var x = setInterval(function() {
 
-    var now = new Date().getTime();
-    
-    var distance = self.countDownDate - now;
-    
-    var d = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var s = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    function pretty_time_string(num) {
-    	return ( num < 10 ? "0" : "" ) + num;
-    }
-    
-    days.text(pretty_time_string(d));
-    hours.text(pretty_time_string(h));
-    minutes.text(pretty_time_string(m));
-    seconds.text(pretty_time_string(s));
+			var now = new Date().getTime();
 
-    if (distance < 0) {
-    	clearInterval(x);
-    }
-  }, 1000);
+			var distance = self.countDownDate - now;
+
+			var d = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var s = Math.floor((distance % (1000 * 60)) / 1000);
+
+			function pretty_time_string(num) {
+				return ( num < 10 ? "0" : "" ) + num;
+			}
+
+			days.text(pretty_time_string(d));
+			hours.text(pretty_time_string(h));
+			minutes.text(pretty_time_string(m));
+			seconds.text(pretty_time_string(s));
+
+			if (distance < 0) {
+				clearInterval(x);
+				days.html('00');
+				hours.html('00');
+				minutes.html('00');
+				seconds.html('00')
+			}
+		}, 1000);
 	}
 }
